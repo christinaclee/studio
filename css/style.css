@@ -1,0 +1,66 @@
+/* Container rules */
+.portfolio-grid {
+  display: grid;
+  /* Creates exactly 2 columns of equal width */
+  grid-template-columns: repeat(2, 1fr); 
+  /* Space between columns and rows - adjust to match your preference */
+  gap: 40px 24px; 
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Individual project container */
+.project-item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image containment rules to ensure consistency */
+.image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f5f5f5; /* Temporary baseline color while loading */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* Optional: Smooth hover effect common in editorial design */
+  transition: opacity 0.3s ease;
+}
+
+.image-wrapper img:hover {
+  opacity: 0.85;
+}
+
+/* Text detailing the project */
+.project-info {
+  margin-top: 12px;
+}
+
+.project-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.project-info p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive adjustment: Switch to 1 column on smaller devices */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
