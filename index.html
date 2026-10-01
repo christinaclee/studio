@@ -4,44 +4,70 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-    <title>CHRISTINA LEE — STUDIO INDEX</title>
-    
+    <title>christina lee</title>
+    <meta name="description" content="Christina Lee (b. 2003, Sarawak) is a Malaysian multidisciplinary artist working across painting, new media and installation, based between Malaysia and Taiwan." />
+    <meta property="og:title" content="christina lee" />
+    <meta property="og:description" content="Malaysian multidisciplinary artist working across painting, new media and installation." />
+    <meta property="og:image" content="images/11.jpeg" />
+
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/_media.css" rel="stylesheet" />
 
     <style>
-      /* UNVEIL Studio Hyper-Minimalist Grid Framework + Animated Micro Grey Polka Dot Background */
-      body { 
-        background-color: #d5e4c0; 
-        background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px);
-        background-size: 24px 24px;
-        background-position: 0 0;
-        animation: driftDots 12s linear infinite;
-        color: #235ba8; 
+      /* Studio Hyper-Minimalist Framework — Clean Background Style */
+      :root { --header-h: 72px; }
+
+      html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden;
+      }
+
+      body {
+        background-color: #f2f2f2;
+        color: #235ba8;
         font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         letter-spacing: -0.01em;
         padding-bottom: 120px;
-        margin: 0;
+        cursor: auto;
       }
 
-      @keyframes driftDots {
-        0% { background-position: 0 0; }
-        100% { background-position: 48px 0; }
+      /* Global Centering Wrapper with balanced side margins */
+      .page-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #f2f2f2;
+        box-sizing: border-box;
       }
 
+      /* Container override for spacing inside the centered wrapper */
+      .container, div[class*="container"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Header: fixed, sits above every overlay so it shows site-wide */
       .custom-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(8px);
+        background: #f2f2f2;
         border-bottom: 1px solid #000000;
-        padding: 24px 40px;
-        position: sticky;
+        padding: 24px 30px;
+        position: fixed;
         top: 0;
-        z-index: 1000;
+        left: 0;
+        right: 0;
+        z-index: 5000;
+        box-sizing: border-box;
       }
       .header-logo {
         font-size: 14px;
@@ -66,19 +92,20 @@
         letter-spacing: 2px;
         font-weight: 500;
         transition: opacity 0.2s ease;
+        cursor: pointer;
       }
       .header-nav a:hover, .header-nav a.active {
         opacity: 0.5;
       }
 
       .unveil-hero-text {
-        font-size: 26px;
-        line-height: 1.5;
+        font-size: 15px;
+        line-height: 1.7;
         font-weight: 400;
-        color: #235ba8;
-        max-width: 820px;
+        color: #555555;
+        max-width: 100%;
         margin-top: 0;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
       }
 
       .unveil-section-title {
@@ -94,148 +121,87 @@
         scroll-margin-top: 120px;
       }
 
-      .unveil-grid-row {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
-      }
-      
-      .unveil-col-3 { 
-        flex: 0 0 33.333%; 
-        max-width: 33.333%; 
-        padding: 0 30px; 
-        margin-bottom: 40px; 
-      }
-      .unveil-col-4 { flex: 0 0 33.333%; max-width: 33.333%; padding: 0 15px; margin-bottom: 50px; }
-      .unveil-col-6 { flex: 0 0 50%; max-width: 50%; padding: 0 15px; margin-bottom: 60px; }
-      .unveil-col-8 { flex: 0 0 66.666%; max-width: 66.666%; padding: 0 15px; margin-bottom: 60px; }
-
-      .unveil-list { list-style: none; padding: 0; margin: 0; }
-      .unveil-list li { 
-        font-size: 13px; 
-        line-height: 2.4; 
-        color: #555555; 
-        margin-bottom: 8px; 
-        letter-spacing: 0.03em;
-      }
-
-      .interactive-project-card { cursor: pointer; margin-bottom: 40px; }
-      .unveil-image-container { border: 1px solid #e5e5e5; background: #ffffff; margin-bottom: 15px; overflow: hidden; position: relative; }
-      .unveil-image-container img { width: 100%; display: block; transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.3s ease; }
-      
-      .interactive-project-card:hover .unveil-image-container img { transform: scale(1.02); filter: brightness(0.95); }
-      .unveil-image-container::after {
-        content: "VIEW PROJECT →";
-        position: absolute; bottom: 15px; right: 15px; background: #000000; color: #ffffff;
-        font-family: monospace; font-size: 10px; padding: 6px 12px; letter-spacing: 1px;
-        opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(5px);
-      }
-      .interactive-project-card:hover .unveil-image-container::after { opacity: 1; transform: translateY(0); }
-
-      .meta-caption { font-family: monospace; font-size: 11px; color: #888888; display: flex; justify-content: space-between; }
-
-      .project-overlay {
-        position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff;
-        z-index: 2000; display: none; overflow-y: auto; opacity: 0; transition: opacity 0.4s ease;
-        padding: 80px 40px; box-sizing: border-box;
-      }
-      .project-overlay.active { display: block; opacity: 1; }
-      .close-overlay-btn {
-        position: fixed; top: 30px; right: 40px; background: transparent; border: none;
-        font-family: monospace; font-size: 12px; letter-spacing: 2px; cursor: pointer;
-        text-transform: uppercase; font-weight: bold; z-index: 2100; padding: 10px; border-bottom: 1px solid #000000;
-      }
-      .overlay-content-wrapper { max-width: 1000px; margin: 0 auto; }
-
-      /* Custom Accordion Interactive Styling */
-      .accordion-header {
+      .cv-sub-heading {
         font-family: "SFMono-Regular", Consolas, monospace;
         font-size: 11px;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
-        color: #000000;
-        margin-bottom: 35px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #000000;
+        letter-spacing: 1px;
+        color: #555555;
+        margin-top: 70px;
+        margin-bottom: 15px;
         font-weight: 600;
+      }
+
+      /* ==========================================================================
+         PORTFOLIO GRID SYSTEM (Clean 2-Column Responsive Layout)
+         ========================================================================== */
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 40px;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 60px auto;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .grid-span-full {
+        grid-column: span 2;
+      }
+
+      .project-item {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: inherit;
         cursor: pointer;
-        user-select: none;
-        transition: opacity 0.2s ease;
-      }
-      .accordion-header:hover {
-        opacity: 0.6;
-      }
-      .accordion-toggle-icon {
-        display: inline-block;
-        width: 12px;
-      }
-      .accordion-content {
-        max-height: 300px;
-        overflow: hidden;
-        transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
-        opacity: 1;
-      }
-      .accordion-item.collapsed .accordion-content {
-        max-height: 0;
-        opacity: 0;
       }
 
-      /* Minimal Clean Image-Only Grid */
-      .tpe-photo-gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        margin: 40px 0;
-      }
-      .tpe-gallery-item {
-        cursor: zoom-in;
-        overflow: hidden;
-      }
-      .tpe-gallery-item img {
+      .image-wrapper {
         width: 100%;
-        display: block;
-        height: auto;
-        transition: opacity 0.2s ease;
-      }
-      .tpe-gallery-item:hover img {
-        opacity: 0.9;
-      }
-
-      /* Lightbox interactive target styling for sequence images */
-      .zoomable-sequence-img {
-        cursor: zoom-in;
-        transition: opacity 0.2s ease;
-      }
-      .zoomable-sequence-img:hover {
-        opacity: 0.95;
-      }
-
-      /* Generative Field Studies Grid Layout */
-      .generative-field-gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        margin: 40px 0;
-      }
-      .generative-field-item {
-        cursor: zoom-in;
-        border: 1px solid #e5e5e5;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
-        background: #000000;
+        background: transparent;
+        position: relative;
+        padding: 0;
+        box-sizing: border-box;
       }
-      .generative-field-item img {
-        width: 100%;
-        display: block;
+
+      .image-wrapper img {
+        max-width: 100%;
+        max-height: 220px;
+        width: auto;
         height: auto;
-        transition: opacity 0.2s ease, transform 0.4s ease;
+        display: block;
+        object-fit: contain;
+        transition: opacity 0.3s ease, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        box-shadow: none;
+        border: none;
       }
-      .generative-field-item:hover img {
+
+      .project-item:hover .image-wrapper img {
         opacity: 0.85;
-        transform: scale(1.01);
+        transform: scale(1.02);
       }
 
-      /* Fullscreen Micro Lightbox System */
+      /* Overlays start below the fixed header */
+      .project-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f2f2f2;
+        z-index: 2000; display: none; overflow-y: auto; opacity: 0; transition: opacity 0.4s ease;
+        padding: calc(var(--header-h) + 40px) 30px 40px; box-sizing: border-box;
+      }
+      .project-overlay.active { display: block; opacity: 1; }
+      .close-overlay-btn {
+        position: fixed; top: calc(var(--header-h) + 16px); right: 30px; background: transparent; border: none;
+        font-family: monospace; font-size: 12px; letter-spacing: 2px; cursor: pointer;
+        text-transform: uppercase; font-weight: bold; z-index: 2100; padding: 10px; border-bottom: 1px solid #000000;
+      }
+      .overlay-content-wrapper { width: 100% !important; max-width: 1140px !important; margin: 0 auto; box-sizing: border-box; }
+
       .unveil-lightbox {
         position: fixed; top: 0; left: 0; width: 100%; height: 100%;
         background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px);
@@ -245,517 +211,496 @@
       .unveil-lightbox.active { display: flex; opacity: 1; }
       .unveil-lightbox img {
         max-width: 90%; max-height: 85vh; object-fit: contain;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.08); border: 1px solid #e5e5e5;
-      }
-
-      /* Native Responsive Web Video Canvas Component Overlay Container styling */
-      .studio-video-container {
-        position: relative;
-        width: 100%;
-        background: #000000;
-        border: 1px solid #000000;
-        margin: 40px 0;
-      }
-      .studio-video-container video {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      /* Pipeline Blueprint Display Style */
-      .pipeline-blueprint-container {
-        border: 1px solid #235ba8;
-        background: #ffffff;
-        margin: 30px 0;
-        cursor: zoom-in;
-        overflow: hidden;
-      }
-      .pipeline-blueprint-container img {
-        width: 100%;
-        display: block;
-        height: auto;
-        transition: opacity 0.2s ease;
-      }
-      .pipeline-blueprint-container:hover img {
-        opacity: 0.95;
+        box-shadow: none; border: none;
       }
 
       @media (max-width: 768px) {
-        .unveil-col-3, .unveil-col-4, .unveil-col-6, .unveil-col-8 { flex: 0 0 100% !important; max-width: 100% !important; }
+        :root { --header-h: 100px; }
+        .portfolio-grid { grid-template-columns: 1fr; gap: 30px; }
+        .grid-span-full { grid-column: span 1; }
         .custom-header { padding: 20px; flex-direction: column; gap: 15px; }
-        .close-overlay-btn { top: 15px; right: 20px; }
-        .tpe-photo-gallery, .generative-field-gallery { grid-template-columns: 1fr; }
+        .close-overlay-btn { top: calc(var(--header-h) + 10px); right: 20px; }
+        .container { padding-left: 20px !important; padding-right: 20px !important; }
+        .project-overlay { padding: calc(var(--header-h) + 40px) 20px 40px; }
+        .page-wrapper { margin: 0; }
       }
     </style>
   </head>
-  
+
   <body id="top">
+    <!-- Header lives outside the wrapper and is fixed, so it stays on every view -->
     <header class="custom-header">
-      <a href="#" class="header-logo" onclick="closeAllProjects(); window.scrollTo({top:0, behavior:'smooth'}); return false;">CHRISTINA LEE</a>
+      <a href="#" class="header-logo" onclick="closeAllProjects(); window.scrollTo({top:0, behavior:'smooth'}); return false;">christina lee</a>
       <nav>
         <ul class="header-nav">
-          <li><a href="#top" class="active" onclick="closeAllProjects();">Studio</a></li>
-          <li><a href="#primary-projects-target" onclick="closeAllProjects();">Projects</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="#historical-exhibitions-target" onclick="closeAllProjects();">Exhibitions</a></li>
+          <li><a href="#top" data-nav="about" class="active" onclick="closeAllProjects();">About</a></li>
+          <li><a href="#projects" data-nav="artworks" onclick="openProjectsIndex(); return false;">Artworks</a></li>
           <li><a href="mailto:christinaclee.art@gmail.com">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="container" style="padding-top: 80px; max-width: 1140px; margin: 0 auto;">
-      
-      <div class="unveil-grid-row" style="margin-bottom: 80px;">
-        <div class="unveil-col-8">
-          <p class="unveil-hero-text">
-            <strong>CHRISTINA LEE</strong> is a visual art studio using spatial frameworks and digital pipelines to expand human perception. Based across <strong>Malaysia and Taiwan</strong>, the studio focuses on how spatial boundaries can be altered to cultivate a deep sense of clarity and structural optimism.
-          </p>
-          <p class="unveil-hero-text" style="font-size: 16px; color: #555555; max-width: 750px;">
-            The studio explores delicate loops of time, memory, and presence. By mapping raw artistic configurations directly against systematic media servers, we reconfigure traditional physical constraints into open environments.
-          </p>
-        </div>
-      </div>
+    <div class="page-wrapper">
 
-      <!-- Minimized-by-default Interactive Column Section -->
-      <div class="unveil-grid-row" style="margin-bottom: 90px;">
-        <div class="unveil-col-3 accordion-item collapsed">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            <span class="accordion-toggle-icon">+</span> Services
-          </div>
-          <div class="accordion-content">
-            <ul class="unveil-list">
-              <li>Exhibition Curation</li>
-              <li>Spatial Layout Design</li>
-              <li>Fine Art Execution</li>
-              <li>AV Mapping Config</li>
-            </ul>
+      <div class="container" style="padding-top: calc(var(--header-h) + 40px);">
+
+        <!-- Hero Header Section: Biography -->
+        <div style="display: grid; grid-template-columns: repeat(12, 1fr); margin-bottom: 60px; width: 100%;">
+          <div style="grid-column: span 12; width: 100%;">
+            <div class="unveil-section-title" id="biography-target">ABOUT</div>
+            <p class="unveil-hero-text">
+              Christina Lee (b. 2003, Sarawak) is a Malaysian multidisciplinary artist currently based between Malaysia and Taiwan. She is expanding her practice and exploring new possibilities within the field of new media arts in Taipei.
+            </p>
+            <p class="unveil-hero-text">
+              Drawing inspiration from everyday life, Christina examines the spaces, images, and environments that shape our perception of the world. Her practice is driven by a curiosity about the familiar and an interest in uncovering the subtle relationships between what is seen and what often goes unnoticed.
+            </p>
+            <p class="unveil-hero-text">
+              Through her work, she invites viewers to reconsider their surroundings and engage with the overlooked aspects of everyday experience.
+            </p>
+            <p class="unveil-hero-text" style="font-family: monospace; font-size: 14px; color: #235ba8; margin-top: 25px;">
+              <em>“We observe where we stand.”</em>
+            </p>
+            <p class="unveil-hero-text" style="margin-top: 20px;">
+              Working across painting, new media, and installation, Christina explores spatial boundaries, perception, and the relationship between individuals and their environments.
+            </p>
           </div>
         </div>
 
-        <div class="unveil-col-3 accordion-item collapsed">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            <span class="accordion-toggle-icon">+</span> Operations
-          </div>
-          <div class="accordion-content">
-            <ul class="unveil-list">
-              <li>Kuala Lumpur, MY</li>
-              <li>Taipei, TW</li>
-              <li>Experimental Inquiries</li>
-              <li>Hardware Pipelines</li>
-            </ul>
-          </div>
-        </div>
+        <!-- CV Section (Combined Education, Experiences, and Exhibitions) -->
+        <div style="display: grid; grid-template-columns: repeat(12, 1fr); margin-top: 60px; width: 100%;">
+          <div style="grid-column: span 12; width: 100%;">
+            <div class="unveil-section-title" id="cv-target">CV</div>
 
-        <div class="unveil-col-3 accordion-item collapsed">
-          <div class="accordion-header" onclick="toggleAccordion(this)">
-            <span class="accordion-toggle-icon">+</span> Frameworks
-          </div>
-          <div class="accordion-content">
-            <ul class="unveil-list">
-              <li>Resolume Arena</li>
-              <li>Godot Engine Simulation</li>
-              <li>Python Automation</li>
-              <li>Adobe Creative Suite</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+            <!-- Education Subsection -->
+            <div class="cv-sub-heading" style="margin-top: 0;">Education</div>
 
-      <div class="unveil-grid-row" style="margin-bottom: 20px;">
-        <div class="col-sm-12" style="width: 100%; padding: 0 15px;">
-          <div class="unveil-section-title" id="primary-projects-target">- Primary Studio Projects Index</div>
-        </div>
-      </div>
-
-      <div class="unveil-grid-row" style="margin-bottom: 60px;">
-        <div class="unveil-col-8">
-          <div class="interactive-project-card" onclick="openProject('spotlight')">
-            <div class="unveil-image-container">
-              <img alt="Between Me & The World" src="images/2.jpeg" />
+            <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e5e5e5;">
+              <div style="font-family: monospace; font-size: 13px; color: #888888; margin-bottom: 4px;">2025 — Present</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">Bachelor of Fine Arts majoring in New Media Arts</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">Taipei National University of the Arts (TNUA), Taiwan</div>
             </div>
-            <div class="meta-caption">
-              <span>Fig 1.0 / Between Me & The World - Spatial Layout Profile</span>
-              <span>Active Solo Core</span>
+
+            <div style="margin-bottom: 35px;">
+              <div style="font-family: monospace; font-size: 13px; color: #888888; margin-bottom: 4px;">2022 — 2024</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">Diploma in Fine Art</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">Malaysian Institute of Art (MIA), Malaysia</div>
             </div>
+
+            <!-- Experiences Subsection -->
+            <div class="cv-sub-heading">Experience</div>
+
+            <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e5e5e5;">
+              <div style="font-family: monospace; font-size: 13px; color: #888888; margin-bottom: 4px;">2025</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">Project Manager</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">Else Gallery, Kuala Lumpur, Malaysia</div>
+            </div>
+
+            <div style="margin-bottom: 35px;">
+              <div style="font-family: monospace; font-size: 13px; color: #888888; margin-bottom: 4px;">2024</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">Intern/ Gallery Assistant</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">The Back Room KL, Kuala Lumpur, Malaysia</div>
+            </div>
+
+            <!-- Exhibitions Subsection -->
+            <div class="cv-sub-heading">Selected Group Exhibition</div>
+
+            <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e5e5e5;">
+              <div style="font-family: monospace; font-size: 13px; color: #888888; margin-bottom: 4px;">2026</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">UR-MU Open Wall</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">The Project Room, The Toffee, UR-MU</div>
+            </div>
+
+            <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e5e5e5;">
+              <div style="font-family: monospace; font-size: 13px; color: #888888; margin-bottom: 4px;">2025</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">JigSAW: Seeking A Way</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">MIA Fine Art Department Graduation Show</div>
+            </div>
+
+            <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e5e5e5;">
+              <div style="font-family: monospace; font-size: 13px; color: #888888; margin-bottom: 4px;">2024</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">Bakat Mahasiswa Showcase</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">GMBB</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 10px;">SHE</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">KL City Art Gallery</div>
+            </div>
+
+            <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e5e5e5;">
+              <div style="font-family: monospace; font-size: 13px; color: #888888; margin-bottom: 4px;">2023</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">Bakat Mahasiswa, MIA Fine Art Department Collaboration with SK Jugra</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">Selangor, Malaysia</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 10px;">Beautiful Beast</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">KL City Art Gallery</div>
+            </div>
+
+            <div style="margin-bottom: 35px;">
+              <div style="font-family: monospace; font-size: 13px; color: #888888; margin-bottom: 4px;">2022</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">Black & White Department Selection</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">MIA Fine Art Department Group Show</div>
+            </div>
+
           </div>
         </div>
-        <div class="unveil-col-4" style="padding-left: 20px;">
-          <h3 style="font-size: 18px; text-transform: uppercase; letter-spacing: 1px; margin-top: 0; font-weight: 700;">SITUATIONAL PERCEPTION</h3>
-          <p style="font-size: 13px; line-height: 1.7; color: #555555; text-align: justify; margin-top: 15px;">
-            This exhibition invites the audience to enter a world where the familiar stretches into a whole new visual. Inspired by architectural spaces, the visuals explore a balance of structure and spontaneity.
-          </p>
-        </div>
+
       </div>
 
-      <div class="unveil-grid-row" style="margin-bottom: 30px;">
-        <div class="unveil-col-6">
-          <div class="interactive-project-card" onclick="openProject('index-01')">
-            <div class="unveil-image-container">
+      <!-- Studio Footer Layout Area -->
+      <footer style="margin-top: 100px; padding: 60px 0; border-top: 1px solid #000000; background: rgba(255, 255, 255, 0.2); width: 100%; box-sizing: border-box;">
+        <div style="width: 100%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 30px; box-sizing: border-box;">
+          <span style="font-family: monospace; font-size: 11px; letter-spacing: 1px; color: #000000;">
+            CONTACT // <a href="mailto:christinaclee.art@gmail.com" style="color: #000000; font-weight: 700; text-decoration: underline;">christinaclee.art@gmail.com</a>
+          </span>
+          <span style="font-family: monospace; font-size: 10px; color: #555555; letter-spacing: 1px;">
+            &copy; 2026 CHRISTINA LEE. ALL RIGHTS PROTECTED.
+          </span>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Artworks Index Full-Screen Overlay (Opens when clicking "Artworks") -->
+    <div id="projects-directory-overlay" class="project-overlay">
+      <button class="close-overlay-btn" onclick="closeAllProjects()">Close&times;</button>
+      <div class="overlay-content-wrapper">
+        <div class="unveil-section-title" id="primary-projects-target">Selected Artworks</div>
+
+        <!-- Balanced Portfolio Grid Engine -->
+        <div class="portfolio-grid" style="margin-top: 40px;">
+
+          <!-- Project Item: DRIFT -->
+          <div class="project-item" onclick="openProject('index-01')">
+            <div class="image-wrapper">
               <img alt="DRIFT" src="images/11.jpeg" />
             </div>
-            <div class="meta-caption" style="margin-bottom: 10px;">
-              <span>Index Ref // 01</span>
-              <span>Panoramic Configuration</span>
-            </div>
-            <h4 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin: 10px 0 5px 0; font-weight: 700;">DRIFT</h4>
-            <p style="font-size: 13px; line-height: 1.6; color: #666666; margin-top: 5px;">A multi-channel spatial alignment deployed inside an integrated black box gallery setup.</p>
           </div>
-        </div>
 
-        <div class="unveil-col-6">
-          <div class="interactive-project-card" onclick="openProject('index-02')">
-            <div class="unveil-image-container">
+          <!-- Project Item: Glitch -->
+          <div class="project-item" onclick="openProject('glitch')">
+            <div class="image-wrapper">
+              <img alt="glitch" src="images/glitch.jpg" />
+            </div>
+          </div>
+
+          <!-- Project Item: The Paper Sky Series -->
+          <div class="project-item" onclick="openProject('paper-sky-series')">
+            <div class="image-wrapper">
+              <img alt="The Paper Sky series" src="images/papersky.jpeg" />
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="project-item" onclick="openProject('spotlight')">
+            <div class="image-wrapper">
+              <img alt="Works on canvas" src="images/2.jpeg" />
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="project-item" onclick="openProject('index-05')">
+            <div class="image-wrapper">
+              <img src="images/8.jpeg" alt="ROOTS photography collection" />
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="project-item" onclick="openProject('index-02')">
+            <div class="image-wrapper">
               <img alt="Taipei Photobook" src="images/5.jpeg" />
             </div>
-            <div class="meta-caption" style="margin-bottom: 10px;">
-              <span>Index Ref // 02</span>
-              <span>Printed Edition / Taipei</span>
-            </div>
-            <h4 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin: 10px 0 5px 0; font-weight: 700;">TAB(TPE): 1st PHOTOBOOK EDITION</h4>
-            <p style="font-size: 13px; line-height: 1.6; color: #666666; margin-top: 5px;">A limited-edition publication mapping urban traces via strict geometry arrays.</p>
           </div>
-        </div>
-      </div>
 
-      <div class="unveil-grid-row" style="padding-bottom: 60px; border-bottom: 1px solid #000000; margin-bottom: 60px;">
-        <div class="unveil-col-4">
-          <div class="interactive-project-card" onclick="openProject('index-03')">
-            <div class="unveil-image-container"><img src="images/6.jpeg" alt="Top to Bottom" /></div>
-            <div class="meta-caption"><span>Index Ref // 03</span><span>Ecological Framework</span></div>
-            <h5 style="font-size: 13px; text-transform: uppercase; margin: 12px 0 5px 0; font-weight: 700;">From the Top to Bottom</h5>
-          </div>
-        </div>
-        <div class="unveil-col-4">
-          <div class="interactive-project-card" onclick="openProject('index-04')">
-            <div class="unveil-image-container"><img src="images/ALIEN.jpg" alt="Alien Interlude" /></div>
-            <div class="meta-caption"><span>Index Ref // 04</span><span>3D+VFX Series</span></div>
-            <h5 style="font-size: 13px; text-transform: uppercase; margin: 12px 0 5px 0; font-weight: 700;">Alien Interlude - 3D+VFX</h5>
-          </div>
-        </div>
-        <div class="unveil-col-4">
-          <div class="interactive-project-card" onclick="openProject('index-05')">
-            <div class="unveil-image-container"><img src="images/8.jpeg" alt="Data Pipelines" /></div>
-            <div class="meta-caption"><span>Index Ref // 05</span><span>System Automation</span></div>
-            <h5 style="font-size: 13px; text-transform: uppercase; margin: 12px 0 5px 0; font-weight: 700; color: #235ba8;">Data & Interactive Pipelines</h5>
-          </div>
-        </div>
-      </div>
-
-     <div class="unveil-grid-row" style="margin-top: 40px; padding-bottom: 60px;">
-  <div class="unveil-col-4">
-    <div class="unveil-section-title" id="historical-exhibitions-target">- Curatorial & Exhibition Log</div>
-    <p style="font-size: 13px; color: #666666; line-height: 1.6; padding-right: 20px;">
-      A structural registry tracking physical gallery production, international technical curatorial directions, and collaborative institutional installations.
-    </p>
-  </div>
-  
-  <div class="unveil-col-8">
-    <div class="accordion-item">
-      <div class="accordion-header" onclick="toggleAccordion(this)" style="display: flex; justify-content: space-between; cursor: pointer; padding-bottom: 15px; font-size: 13px; font-weight: 700; text-transform: uppercase;">
-        <span style="color: #235ba8;"><span class="accordion-toggle-icon" style="display: inline-block; width: 15px;">+</span> Curator & Lead Designer — JigSAW: Seeking A Way</span>
-        <span style="font-family: monospace; font-weight: 400; color: #888888;">2025 / MIA Gallery</span>
-      </div>
-      <div class="accordion-content">
-        <p style="font-size: 13px; color: #555555; margin-top: 6px; margin-bottom: 0; padding-left: 20px; padding-bottom: 20px;">
-          Directed identity log systems, spatial configuration strategy, and asset layouts for the fine art survey.
-        </p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <div class="accordion-header" onclick="toggleAccordion(this)" style="display: flex; justify-content: space-between; cursor: pointer; padding-bottom: 15px; font-size: 13px; font-weight: 700; text-transform: uppercase;">
-        <span style="color: #235ba8;"><span class="accordion-toggle-icon" style="display: inline-block; width: 15px;">+</span> Gallery Assistant — The Back Room KL</span>
-        <span style="font-family: monospace; font-weight: 400; color: #888888;">2024 / Kuala Lumpur</span>
-      </div>
-      <div class="accordion-content">
-        <p style="font-size: 13px; color: #555555; margin-top: 6px; margin-bottom: 0; padding-left: 20px; padding-bottom: 20px;">
-          Coordinated physical staging arrays for presentations including solo shows and art fairs.
-        </p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <div class="accordion-header" onclick="toggleAccordion(this)" style="display: flex; justify-content: space-between; cursor: pointer; padding-bottom: 15px; font-size: 13px; font-weight: 700; text-transform: uppercase;">
-        <span style="color: #235ba8;"><span class="accordion-toggle-icon" style="display: inline-block; width: 15px;">+</span> Selected Exhibition Log</span>
-        <span style="font-family: monospace; font-weight: 400; color: #888888;">Archive 2022 — 2024</span>
-      </div>
-      <div class="accordion-content">
-        <p style="font-size: 13px; color: #555555; margin-top: 6px; margin-bottom: 0; padding-left: 20px; padding-bottom: 20px; line-height: 1.7;">
-          • Bakat Mahasiswa Showcase, GMBB (2024)<br>
-          • Bakat Mahasiswa Layout, SK Jugra (2023)<br>
-          • Black & White Department Selection, MIA (2022)
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- Spotlight Overlay -->
-    <div id="project-spotlight" class="project-overlay">
-      <button class="close-overlay-btn" onclick="closeAllProjects()">Close Index ×</button>
-      <div class="overlay-content-wrapper">
-        <div class="unveil-section-title">Case Study / Primary Exhibition Spotlight</div>
-        <h1 style="font-size: 32px; text-transform: uppercase; margin: 20px 0;">Between Me & The World: Situational Perception</h1>
-        <img src="images/2.jpeg" style="width: 100%; border: 1px solid #e5e5e5; margin: 40px 0;" alt="Detail">
-        
-        <div style="font-size: 16px; line-height: 1.8; color: #222222;">
-          <p><strong>Welcome to the other side where the mind is free to wander.</strong></p>
-          <p>This exhibition invites the audiences to enter a world where the familiar stretches into the a whole new visual, and where all possibilities are laid bare.</p>
-          <p>Inspired by architectural spaces and landscapes, the visuals explore a balance of structure and spontaneity, encouraging curiosity and discovery.</p>
-          <p>Each work serves as a portal, guiding the audience through layers of reality, imagination, and introspection, encouraging them to see the world from new perspectives, challenging perceptions of what is real and what is possible.</p>
-        </div>
-      </div>
-    </div>
-    
-    <!-- DRIFT Overlay -->
-    <div id="project-index-01" class="project-overlay">
-      <button class="close-overlay-btn" onclick="closeAllProjects()">Close Index ×</button>
-      <div class="overlay-content-wrapper">
-        <div class="unveil-section-title">Index Ref // 01 — Panoramic Configuration</div>
-        <h1 style="font-size: 32px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">DRIFT</h1>
-        
-        <img src="images/11.jpeg" style="width: 100%; border: 1px solid #000000; margin: 20px 0 40px 0;" alt="Panoramic Installation View">
-
-        <div class="unveil-grid-row">
-          <div class="unveil-col-6">
-            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Core Concept</h3>
-            <p style="font-size: 13px; line-height: 1.8; color: #555555; margin-top: 15px; text-align: justify;">
-              The core concept focuses on the <strong>detachment and return of consciousness</strong>, and <strong>micro-disruptions</strong> within the everyday. It explores the "decoupling" of consciousness and body when the brain enters "auto-pilot" during routine actions like walking.
-            </p>
-            <ul class="unveil-list" style="margin-top: 10px;">
-              <li>• <strong>Weightlessness</strong>: A psychological state where boundaries blur.</li>
-              <li>• <strong>Half-present</strong>: The sensory gap between body and mind.</li>
-              <li>• <strong>Micro-disruptions</strong>: Displacement of familiar objects outside of logic.</li>
-            </ul>
-          </div>
-          <div class="unveil-col-6">
-            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Visual Language</h3>
-            <p style="font-size: 13px; line-height: 1.8; color: #555555; margin-top: 15px;">
-              <strong>Weightlessness</strong> acts as the cause or psychological state, leading to a loss of direction. <strong>Drifting</strong> is the resulting behavior—a slow, aimless displacement driven by spatial flow; a process rather than a destination.
-            </p>
-            <div style="margin-top: 20px; border-top: 1px solid #235ba8; padding-top: 15px;">
-              <h4 style="font-size: 11px; text-transform: uppercase; color: #235ba8;">Technical Pipeline</h4>
-              <p style="font-family: monospace; font-size: 11px; color: #888888;">
-                4-sequence 1920x1080 / Resolume Arena / Mac mini / Epson Short-throw
-              </p>
+          <!-- Project Item -->
+          <div class="project-item" onclick="openProject('index-03')">
+            <div class="image-wrapper">
+              <img src="images/6.jpeg" alt="Double Fantasy photobook" />
             </div>
           </div>
+
+          <!-- Project Item -->
+          <div class="project-item" onclick="openProject('index-04')">
+            <div class="image-wrapper">
+              <img src="images/ALIEN.jpg" alt="Alien Interlude" />
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="project-item" onclick="openProject('portraits')">
+            <div class="image-wrapper">
+              <img alt="Portraits" src="images/portrait.jpg" />
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="project-item" onclick="openProject('shoots')">
+            <div class="image-wrapper">
+              <img alt="Shootings" src="images/shoot.jpg" />
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="project-item" onclick="openProject('design')">
+            <div class="image-wrapper">
+              <img alt="Design" src="images/TD.jpg" />
+            </div>
+          </div>
+
+        </div> <!-- /portfolio-grid -->
+      </div>
+    </div>
+
+    <!-- Individual Artwork Detailed Overlays -->
+    <div id="project-paper-sky-series" class="project-overlay" style="z-index: 2200;">
+      <button class="close-overlay-btn" onclick="closeProjectDetail('paper-sky-series')">Close Artwork &times;</button>
+      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
+        <div class="unveil-section-title" style="text-align: left;">Works on Canvas</div>
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0 8px 0; color: #235ba8; text-align: left;">The Paper Sky Series</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 35px; text-align: left;">Acrylic on Canvas &bull; 3 x 4 ft &bull; 2024</div>
+
+        <!-- First Artwork: Paper Sky -->
+        <div style="margin-bottom: 50px; text-align: center;">
+          <div style="width: 100%; max-width: 500px; margin: 0 auto 15px auto;">
+            <img src="images/papersky.jpeg" style="width: 100%; height: auto; display: block; border: none; box-shadow: none;" alt="Paper Sky">
+          </div>
+          <h3 style="font-size: 16px; font-weight: 600; text-transform: uppercase; margin: 0 0 4px 0; color: #235ba8;">Paper Sky</h3>
+          <p style="font-family: monospace; font-size: 12px; color: #666; margin: 0;">Acrylic on Canvas &bull; 3 x 4 ft &bull; 2024</p>
         </div>
 
-        <div class="unveil-section-title" style="margin-top: 60px;">- Visual Sequence Gallery</div>
-        <div style="margin-top: 20px;">
-          <img src="images/DRIFT_2.png" class="zoomable-sequence-img" style="width: 100%; margin-bottom: 20px; border: 1px solid #e5e5e5;" alt="Drift Sequence 01" onclick="launchLightboxFromElement(this)">
-          <img src="images/DRIFT_5.png" class="zoomable-sequence-img" style="width: 100%; margin-bottom: 20px; border: 1px solid #e5e5e5;" alt="Drift Sequence 02" onclick="launchLightboxFromElement(this)">
-          <img src="images/DRIFT_6.png" class="zoomable-sequence-img" style="width: 100%; margin-bottom: 40px; border: 1px solid #e5e5e5;" alt="Drift Sequence 03" onclick="launchLightboxFromElement(this)">
+        <!-- Second Artwork: After The Paper Sky -->
+        <div style="margin-bottom: 30px; text-align: center;">
+          <div style="width: 100%; max-width: 500px; margin: 0 auto 15px auto;">
+            <img src="images/afterthepapersky.jpeg" style="width: 100%; height: auto; display: block; border: none; box-shadow: none;" alt="After The Paper Sky">
+          </div>
+          <h3 style="font-size: 16px; font-weight: 600; text-transform: uppercase; margin: 0 0 4px 0; color: #235ba8;">After The Paper Sky</h3>
+          <p style="font-family: monospace; font-size: 12px; color: #666; margin: 0;">Acrylic on Canvas &bull; 3 x 4 ft &bull; 2024</p>
         </div>
       </div>
     </div>
 
-    <!-- TAB(TPE) Photobook Overlay -->
-    <div id="project-index-02" class="project-overlay">
-      <button class="close-overlay-btn" onclick="closeAllProjects()">Close Index ×</button>
-      <div class="overlay-content-wrapper">
+    <div id="project-spotlight" class="project-overlay" style="z-index: 2200;">
+      <button class="close-overlay-btn" onclick="closeProjectDetail('spotlight')">Close Artwork &times;</button>
+      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
+        <div class="unveil-section-title">works on canvas</div>
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">TBC</h1>
+        <div style="max-width: 480px; margin: 0 auto;">
+          <img src="images/2.jpeg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Works on Canvas View">
+        </div>
+      </div>
+    </div>
+
+   <div id="project-index-01" class="project-overlay" style="z-index: 2200;">
+      <button class="close-overlay-btn" onclick="closeProjectDetail('index-01')">Close Artwork &times;</button>
+      <div class="overlay-content-wrapper" style="max-width: 1100px; margin: 0 auto;">
+        
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">DRIFT</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 35px;">four-channel video installation &bull; 1 min 50 sec &bull; 2026</div>
+
+        <!-- Single 16:9 x 4 Ultra-Wide Video Container -->
+        <div style="width: 100%; margin-bottom: 50px;">
+          <div style="position: relative; width: 100%; padding-bottom: 25%; background: #000000; overflow: hidden;">
+            <video id="drift-video" controls autoplay loop muted playsinline preload="metadata" poster="images/11.jpeg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
+              <source src="videos/drift-web.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- Additional Panoramic Stills / Variations Gallery -->
+        <div class="unveil-section-title" style="margin-bottom: 25px;">Installation Views & Stills</div>
+
+        <div style="display: flex; flex-direction: column; gap: 40px; margin-bottom: 40px;">
+          <div>
+            <img src="images/11.jpeg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT Installation View">
+            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Installation view in black box gallery</span>
+          </div>
+
+          <div>
+            <img src="images/DRIFT_2.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT Installation View">
+            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Installation view in black box gallery</span>
+          </div>
+
+          <div>
+            <img src="images/DRIFT_3.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT Multi-channel Still 2">
+            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Spherical perspective mapping</span>
+          </div>
+
+          <div>
+            <img src="images/DRIFT_4.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT Motion Graphic Breakdown">
+            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Motion graphic stream layout</span>
+          </div>
+
+          <div>
+            <img src="images/DRIFT_5.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT 3D Asset Floating Composition">
+            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Floating 3D elements composition</span>
+          </div>
+
+          <div>
+            <img src="images/DRIFT_6.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT Color Gradient Study">
+            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Graded composite sequence</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="project-index-02" class="project-overlay" style="z-index: 2200;">
+      <button class="close-overlay-btn" onclick="closeProjectDetail('index-02')">Close Artwork &times;</button>
+      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
         <div class="unveil-section-title">Index Ref // 02 — Printed Edition / Taipei</div>
-        <h1 style="font-size: 32px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">TAB(TPE): 1st Photobook Edition</h1>
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">TAB(TPE): 1st Photobook Edition</h1>
+        <div style="max-width: 480px; margin: 0 auto;">
+          <img src="images/5.jpeg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Taipei Photobook View">
+        </div>
+      </div>
+    </div>
+
+    <div id="project-index-03" class="project-overlay" style="z-index: 2200;">
+      <button class="close-overlay-btn" onclick="closeProjectDetail('index-03')">Close Artwork &times;</button>
+      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
+        <div class="unveil-section-title">Index Ref // 03 — Photobook</div>
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">DOUBLE FANTASY! PHOTOBOOK</h1>
+        <div style="max-width: 480px; margin: 0 auto;">
+          <img src="images/6.jpeg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Double Fantasy View">
+        </div>
+      </div>
+    </div>
+
+    <div id="project-index-04" class="project-overlay" style="z-index: 2200;">
+      <button class="close-overlay-btn" onclick="closeProjectDetail('index-04')">Close Artwork &times;</button>
+      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
+        <div class="unveil-section-title">Index Ref // 04 — 3D+VFX Series</div>
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">Alien Interlude</h1>
+        <div style="max-width: 480px; margin: 0 auto;">
+          <img src="images/ALIEN.jpg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Alien View">
+        </div>
+      </div>
+    </div>
+
+    <div id="project-index-05" class="project-overlay" style="z-index: 2200;">
+      <button class="close-overlay-btn" onclick="closeProjectDetail('index-05')">Close Artwork &times;</button>
+      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
+        <div class="unveil-section-title">Photography Collection</div>
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">roots</h1>
+        <p style="font-size: 14px; color: #555555; margin-bottom: 25px;">A photography collection of my eyes.</p>
+        <div style="max-width: 480px; margin: 0 auto;">
+          <img src="images/8.jpeg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Roots Main View">
+        </div>
+      </div>
+    </div>
+
+    <div id="project-portraits" class="project-overlay" style="z-index: 2200;">
+      <button class="close-overlay-btn" onclick="closeProjectDetail('portraits')">Close Artwork &times;</button>
+      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
+        <div class="unveil-section-title">Portraits Series</div>
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">Portraits of SATO WAKANA</h1>
+        <div style="max-width: 480px; margin: 0 auto;">
+          <img src="images/portrait.jpg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Portraits View">
+        </div>
+      </div>
+    </div>
+
+    <div id="project-shoots" class="project-overlay" style="z-index: 2200;">
+      <button class="close-overlay-btn" onclick="closeProjectDetail('shoots')">Close Artwork &times;</button>
+      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
+        <div class="unveil-section-title">Commercial Production</div>
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">REDBULL commercial</h1>
+        <div style="max-width: 480px; margin: 0 auto;">
+          <img src="images/shoot.jpg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Shoot View">
+        </div>
+      </div>
+    </div>
+
+    <div id="project-glitch" class="project-overlay" style="z-index: 2200;">
+      <button class="close-overlay-btn" onclick="closeProjectDetail('glitch')">Close Artwork &times;</button>
+      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
         
-        <p style="font-size: 14px; line-height: 1.7; color: #555555; max-width: 800px; margin-bottom: 30px;">
-          A geometric documentation framework parsing landscape profiles, structured grids, and environmental intervals across Taipei.
-        </p>
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">glitch</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 35px;">Urban traces and environmental flow</div>
 
-        <div class="unveil-section-title">- Photobook Plates Registry</div>
-        
-        <div class="tpe-photo-gallery">
-          <div class="tpe-gallery-item" onclick="launchLightboxFromWrapper(this)">
-            <img src="images/tpe1.jpg" alt="Taipei Plate 1" />
-          </div>
-          <div class="tpe-gallery-item" onclick="launchLightboxFromWrapper(this)">
-            <img src="images/tpe2.jpg" alt="Taipei Plate 2" />
-          </div>
-          <div class="tpe-gallery-item" onclick="launchLightboxFromWrapper(this)">
-            <img src="images/tpe3.jpg" alt="Taipei Plate 3" />
-          </div>
-          <div class="tpe-gallery-item" onclick="launchLightboxFromWrapper(this)">
-            <img src="images/tpe4.jpg" alt="Taipei Plate 4" />
-          </div>
+        <div style="max-width: 480px; margin: 0 auto;">
+          <img src="images/glitch.jpg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Glitch View">
         </div>
       </div>
     </div>
 
-    <!-- Index Ref // 03 — From the Top to Bottom -->
-    <div id="project-index-03" class="project-overlay">
-      <button class="close-overlay-btn" onclick="closeAllProjects()">Close Index ×</button>
-      <div class="overlay-content-wrapper">
-        <div class="unveil-section-title">Index Ref // 03 — Ecological Framework</div>
-        <h1 style="font-size: 32px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">From the Top to Bottom</h1>
-        
-        <p style="font-size: 14px; line-height: 1.7; color: #555555; max-width: 800px; margin-bottom: 20px;">
-          An interactive framework charting vertical visual data loops, tracking structural and natural frequencies moving downwards through space.
-        </p>
-
-        <div class="studio-video-container">
-          <video controls preload="metadata" poster="images/6.jpeg">
-            <source src="videos/top_to_bottom.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="unveil-grid-row" style="margin-top: 30px;">
-          <div class="unveil-col-6">
-            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Spatial Alignment</h3>
-            <p style="font-size: 13px; line-height: 1.8; color: #555555; margin-top: 15px; text-align: justify;">
-              This video configuration isolates structural layers, cascading sequences systematically against black background environments to isolate form and trajectory loops.
-            </p>
-          </div>
-          <div class="unveil-col-6">
-            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Technical Specs</h3>
-            <p style="font-size: 13px; line-height: 1.8; color: #555555; margin-top: 15px;">
-              • Format: H.264 MP4 / 24fps Continuous Linear Execution<br>
-              • Spatial Application: Generative Layout Node Processing System
-            </p>
-          </div>
-        </div>
-
-        <div class="unveil-section-title" style="margin-top: 60px;">- Generative Vector Field Studies</div>
-        <div class="generative-field-gallery">
-          <div class="generative-field-item" onclick="launchLightboxFromElement(this.querySelector('img'))">
-            <img src="images/fur_1.jpg" alt="Generative Vector Flow Field 01" />
-          </div>
-          <div class="generative-field-item" onclick="launchLightboxFromElement(this.querySelector('img'))">
-            <img src="images/fur_2.jpg" alt="Generative Vector Flow Field 02" />
-          </div>
-          <div class="generative-field-item" onclick="launchLightboxFromElement(this.querySelector('img'))">
-            <img src="images/fur_3.jpg" alt="Generative Vector Flow Field 03" />
-          </div>
-          <div class="generative-field-item" onclick="launchLightboxFromElement(this.querySelector('img'))">
-            <img src="images/fur_4.jpg" alt="Generative Vector Flow Field 04" />
-          </div>
+    <div id="project-design" class="project-overlay" style="z-index: 2200;">
+      <button class="close-overlay-btn" onclick="closeProjectDetail('design')">Close Artwork &times;</button>
+      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
+        <div class="unveil-section-title">Interactive Studies</div>
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">TouchDesigner</h1>
+        <div style="max-width: 480px; margin: 0 auto;">
+          <img src="images/TD.jpg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="TouchDesigner View">
         </div>
       </div>
     </div>
 
-<!-- Updated Project Overlay for Index Ref // 04 -->
-<div id="project-index-04" class="project-overlay">
-  <button class="close-overlay-btn" onclick="closeAllProjects()">Close Index ×</button>
-  <div class="overlay-content-wrapper">
-    <div class="unveil-section-title">Index Ref // 04 — 3D+VFX Series</div>
-    <h1 style="font-size: 32px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">Alien Interlude</h1>
-    
-    <p style="font-size: 14px; line-height: 1.7; color: #555555; max-width: 800px; margin-bottom: 20px;">
-      A study of "half-presence" through non-linear movement and procedural character animation.
-    </p>
-
-    <!-- Interactive Video Component -->
-    <div class="studio-video-container">
-      <video controls preload="metadata" poster="images/ALIEN.jpg">
-        <source src="videos/alien_interlude_vfx.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <div class="unveil-grid-row" style="margin-top: 30px;">
-      <div class="unveil-col-6">
-        <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Philosophical Framework</h3>
-        <p style="font-size: 13px; line-height: 1.8; color: #555555; margin-top: 15px; text-align: justify;">
-          This series explores <strong>weightlessness</strong> and the decoupling of the body from its environment. By introducing <strong>micro-disruptions</strong> in the animation cycle, the work highlights a state of being <strong>half-present</strong> within a digital void.
-        </p>
-      </div>
-      <div class="unveil-col-6">
-        <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Technical Pipeline</h3>
-        <p style="font-size: 13px; line-height: 1.8; color: #555555; margin-top: 15px;">
-          • Procedural Scripting: Python-driven flight paths<br>
-          • Animation: Blender Geometry Nodes<br>
-          • Environment: Zero-G Simulation Canvas
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-   <!-- Interactive Overlay Panel: Index Ref // 05 — Data & Interactive Pipelines -->
-    <div id="project-index-05" class="project-overlay">
-      <button class="close-overlay-btn" onclick="closeAllProjects()">Close Index ×</button>
-      <div class="overlay-content-wrapper">
-        <div class="unveil-section-title">Index Ref // 05 — System Automation</div>
-        <h1 style="font-size: 32px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">Data & Interactive Pipelines</h1>
-        
-        <p style="font-size: 14px; line-height: 1.7; color: #555555; max-width: 800px; margin-bottom: 20px;">
-          Mapping systematic automation and algorithmic behaviors. This research focus utilizes scripting to bridge the gap between human perception and digital execution.
-        </p>
-
-        <div class="pipeline-blueprint-container" onclick="launchLightboxFromElement(this.querySelector('img'))">
-          <img src="images/8.jpeg" alt="Automation Pipeline Blueprint" />
-        </div>
-
-        <div class="unveil-grid-row" style="margin-top: 30px;">
-          <div class="unveil-col-6">
-            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Structural Logic</h3>
-            <p style="font-size: 13px; line-height: 1.8; color: #555555; margin-top: 15px; text-align: justify;">
-              Using <strong>Python</strong> to automate complex animation loops—such as bee flight paths and sequential architectural transitions—to create a seamless sense of <strong>weightlessness</strong> within digital environments.
-            </p>
-          </div>
-          <div class="unveil-col-6">
-            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Simulation Tools</h3>
-            <p style="font-size: 13px; line-height: 1.8; color: #555555; margin-top: 15px;">
-              • Godot Engine: Interactive masking mechanics<br>
-              • Python: Blender automation scripts<br>
-              • Resolume Arena: Real-time spatial mapping
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Fullscreen Micro Lightbox System -->
+    <!-- Fullscreen Micro Lightbox Overlay Element System -->
     <div id="unveil-lightbox" class="unveil-lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Lightbox View">
     </div>
 
-    <!-- Footer Section -->
-    <footer style="margin-top: 100px; padding: 60px 0; border-top: 1px solid #000000; background: rgba(255, 255, 255, 0.2);">
-      <div class="container" style="max-width: 1140px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px;">
-        <span style="font-family: monospace; font-size: 11px; letter-spacing: 1px; color: #000000;">
-          CONTACT // <a href="mailto:christinaclee.art@gmail.com" style="color: #000000; font-weight: 700; text-decoration: underline;">christinaclee.art@gmail.com</a>
-        </span>
-        <span style="font-family: monospace; font-size: 10px; color: #555555; letter-spacing: 1px;">
-          &copy; 2026 CHRISTINA LEE STUDIO INDEX. ALL RIGHTS PROTECTED.
-        </span>
-      </div>
-    </footer>
-
-    <!-- Essential Scripts -->
+    <!-- Interactive Layer Alignment Engines -->
     <script>
-      function toggleAccordion(header) {
-        const item = header.parentElement;
-        item.classList.toggle('collapsed');
+      function setNav(name) {
+        document.querySelectorAll('.header-nav a[data-nav]').forEach(function (a) {
+          a.classList.toggle('active', a.dataset.nav === name);
+        });
+      }
+
+      function openProjectsIndex() {
+        pauseDrift();
+        document.querySelectorAll('.project-overlay').forEach(function (o) { o.classList.remove('active'); });
+        var dir = document.getElementById('projects-directory-overlay');
+        if (dir) {
+          dir.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+        setNav('artworks');
       }
 
       function openProject(id) {
-        const overlay = document.getElementById('project-' + id);
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        var overlay = document.getElementById('project-' + id);
+        if (overlay) {
+          overlay.classList.add('active');
+        }
+      }
+
+      function pauseDrift() {
+        var v = document.getElementById('drift-video');
+        if (v) v.pause();
+      }
+
+      function closeProjectDetail(id) {
+        var overlay = document.getElementById('project-' + id);
+        if (overlay) {
+          overlay.classList.remove('active');
+        }
+        if (id === 'index-01') pauseDrift();
       }
 
       function closeAllProjects() {
-        const overlays = document.querySelectorAll('.project-overlay');
-        overlays.forEach(o => o.classList.remove('active'));
+        pauseDrift();
+        document.querySelectorAll('.project-overlay').forEach(function (o) { o.classList.remove('active'); });
         document.body.style.overflow = 'auto';
+        setNav('about');
       }
 
       function launchLightboxFromElement(img) {
-        const lb = document.getElementById('unveil-lightbox');
-        const lbImg = document.getElementById('lightbox-img');
+        var lb = document.getElementById('unveil-lightbox');
+        var lbImg = document.getElementById('lightbox-img');
         lbImg.src = img.src;
         lb.classList.add('active');
-      }
-
-      function launchLightboxFromWrapper(wrapper) {
-        const img = wrapper.querySelector('img');
-        launchLightboxFromElement(img);
       }
 
       function closeLightbox() {
         document.getElementById('unveil-lightbox').classList.remove('active');
       }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        var lb = document.getElementById('unveil-lightbox');
+        if (lb.classList.contains('active')) { closeLightbox(); return; }
+        var detail = document.querySelector('.project-overlay.active[id^="project-"]');
+        if (detail) { closeProjectDetail(detail.id.replace('project-', '')); return; }
+        closeAllProjects();
+      });
     </script>
   </body>
 </html>
