@@ -100,12 +100,13 @@
 
       .unveil-hero-text {
         font-size: 15px;
-        line-height: 1.7;
+        line-height: 1.8;
         font-weight: 400;
         color: #555555;
         max-width: 100%;
         margin-top: 0;
         margin-bottom: 20px;
+        text-align: justify;
       }
 
       .unveil-section-title {
@@ -257,7 +258,7 @@
             <p class="unveil-hero-text">
               Through her work, she invites viewers to reconsider their surroundings and engage with the overlooked aspects of everyday experience.
             </p>
-            <p class="unveil-hero-text" style="font-family: monospace; font-size: 14px; color: #235ba8; margin-top: 25px;">
+            <p class="unveil-hero-text" style="font-family: monospace; font-size: 14px; color: #235ba8; margin-top: 25px; text-align: left;">
               <em>“We observe where we stand.”</em>
             </p>
             <p class="unveil-hero-text" style="margin-top: 20px;">
@@ -298,7 +299,7 @@
             <div style="margin-bottom: 35px;">
               <div style="font-family: monospace; font-size: 13px; color: #888888; margin-bottom: 4px;">2024</div>
               <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">Intern/ Gallery Assistant</div>
-              <div style="font-size: 13px; color: #555; margin-top: 2px;">The Back Room KL, Kuala Lumpur, Malaysia</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">The Back Room, Kuala Lumpur, Malaysia</div>
             </div>
 
             <!-- Exhibitions Subsection -->
@@ -318,8 +319,8 @@
 
             <div style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #e5e5e5;">
               <div style="font-family: monospace; font-size: 13px; color: #888888; margin-bottom: 4px;">2024</div>
-              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">Bakat Mahasiswa Showcase</div>
-              <div style="font-size: 13px; color: #555; margin-top: 2px;">GMBB</div>
+              <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px;">Sayembara Lukisan Karya Agung: Cetusan Bakat Mahasiswa</div>
+              <div style="font-size: 13px; color: #555; margin-top: 2px;">Initiated by the National Art Gallery Malaysia, Exhibited at GMBB</div>
               <div style="font-size: 13px; font-weight: 600; color: #235ba8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 10px;">SHE</div>
               <div style="font-size: 13px; color: #555; margin-top: 2px;">KL City Art Gallery</div>
             </div>
@@ -379,31 +380,10 @@
             </div>
           </div>
 
-          <!-- Project Item: The Paper Sky Series -->
-          <div class="project-item" onclick="openProject('paper-sky-series')">
-            <div class="image-wrapper">
-              <img alt="The Paper Sky series" src="images/papersky.jpeg" />
-            </div>
-          </div>
-
-          <!-- Project Item -->
-          <div class="project-item" onclick="openProject('spotlight')">
-            <div class="image-wrapper">
-              <img alt="Works on canvas" src="images/2.jpeg" />
-            </div>
-          </div>
-
-          <!-- Project Item -->
-          <div class="project-item" onclick="openProject('index-05')">
-            <div class="image-wrapper">
-              <img src="images/8.jpeg" alt="ROOTS photography collection" />
-            </div>
-          </div>
-
           <!-- Project Item -->
           <div class="project-item" onclick="openProject('index-02')">
             <div class="image-wrapper">
-              <img alt="Taipei Photobook" src="images/5.jpeg" />
+              <img alt="Taipei Photobook" src="images/tpe_cover.jpeg" />
             </div>
           </div>
 
@@ -414,24 +394,17 @@
             </div>
           </div>
 
-          <!-- Project Item -->
-          <div class="project-item" onclick="openProject('index-04')">
-            <div class="image-wrapper">
-              <img src="images/ALIEN.jpg" alt="Alien Interlude" />
-            </div>
-          </div>
-
-          <!-- Project Item -->
+            <!-- Project Item -->
           <div class="project-item" onclick="openProject('portraits')">
             <div class="image-wrapper">
-              <img alt="Portraits" src="images/portrait.jpg" />
+              <img alt="Portraits" src="images/wakana3.png" />
             </div>
           </div>
 
-          <!-- Project Item -->
-          <div class="project-item" onclick="openProject('shoots')">
+            <!-- Project Item -->
+          <div class="project-item" onclick="openProject('index-05')">
             <div class="image-wrapper">
-              <img alt="Shootings" src="images/shoot.jpg" />
+              <img src="images/8.jpeg" alt="ROOTS photography collection" />
             </div>
           </div>
 
@@ -442,6 +415,27 @@
             </div>
           </div>
 
+          <!-- Project Item -->
+          <div class="project-item" onclick="openProject('shoots')">
+            <div class="image-wrapper">
+              <img alt="Shootings" src="images/shoot.jpg" />
+            </div>
+          </div>
+
+          <!-- Project Item: The Paper Sky Series -->
+          <div class="project-item" onclick="openProject('paper-sky-series')">
+            <div class="image-wrapper">
+              <img alt="The Paper Sky series" src="images/papersky.jpeg" />
+            </div>
+          </div>
+
+          <!-- Project Item -->
+          <div class="project-item" onclick="openProject('spotlight')">
+            <div class="image-wrapper">
+              <img alt="Works on canvas" src="images/trio.png" />
+            </div>
+          </div>
+
         </div> <!-- /portfolio-grid -->
       </div>
     </div>
@@ -449,15 +443,28 @@
     <!-- Individual Artwork Detailed Overlays -->
     <div id="project-paper-sky-series" class="project-overlay" style="z-index: 2200;">
       <button class="close-overlay-btn" onclick="closeProjectDetail('paper-sky-series')">Close Artwork &times;</button>
-      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
-        <div class="unveil-section-title" style="text-align: left;">Works on Canvas</div>
-        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0 8px 0; color: #235ba8; text-align: left;">The Paper Sky Series</h1>
-        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 35px; text-align: left;">Acrylic on Canvas &bull; 3 x 4 ft &bull; 2024</div>
+      <div class="overlay-content-wrapper" style="max-width: 1100px; margin: 0 auto;">
+        
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">The Paper Sky Series</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 25px;">Acrylic on Canvas &bull; 3 x 4 ft &bull; 2024</div>
+
+        <!-- Concept Text (Full Width & Fully Justified) -->
+        <div style="width: 100%; font-size: 14px; line-height: 1.8; color: #444; text-align: justify; margin-bottom: 35px;">
+          <p style="margin: 0 0 16px 0;">
+            The Paper Sky series investigates the tension between flat architectural planes and boundless atmospheric depth through acrylic media. By rendering fragile horizons on canvas, these works question the stability of perceived boundaries and the artificial structures we construct to frame our environment.
+          </p>
+          <p style="margin: 0 0 16px 0;">
+            Through deliberate shifts in tone and layered pigment application, each canvas acts as a threshold where the familiar surface gives way to an ambiguous expanse. The paintings capture moments of transition, reflecting on how our internal states mirror external weather and spatial shifts.
+          </p>
+          <p style="margin: 0;">
+            Rather than depicting a fixed landscape, the series invites viewers into a continuous contemplation of weight, surface, and atmosphere, bridging physical canvas constraints with boundless sky vistas.
+          </p>
+        </div>
 
         <!-- First Artwork: Paper Sky -->
         <div style="margin-bottom: 50px; text-align: center;">
           <div style="width: 100%; max-width: 500px; margin: 0 auto 15px auto;">
-            <img src="images/papersky.jpeg" style="width: 100%; height: auto; display: block; border: none; box-shadow: none;" alt="Paper Sky">
+            <img src="images/papersky.jpeg" style="width: 100%; height: auto; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Paper Sky">
           </div>
           <h3 style="font-size: 16px; font-weight: 600; text-transform: uppercase; margin: 0 0 4px 0; color: #235ba8;">Paper Sky</h3>
           <p style="font-family: monospace; font-size: 12px; color: #666; margin: 0;">Acrylic on Canvas &bull; 3 x 4 ft &bull; 2024</p>
@@ -466,7 +473,7 @@
         <!-- Second Artwork: After The Paper Sky -->
         <div style="margin-bottom: 30px; text-align: center;">
           <div style="width: 100%; max-width: 500px; margin: 0 auto 15px auto;">
-            <img src="images/afterthepapersky.jpeg" style="width: 100%; height: auto; display: block; border: none; box-shadow: none;" alt="After The Paper Sky">
+            <img src="images/afterthepapersky.jpeg" style="width: 100%; height: auto; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="After The Paper Sky">
           </div>
           <h3 style="font-size: 16px; font-weight: 600; text-transform: uppercase; margin: 0 0 4px 0; color: #235ba8;">After The Paper Sky</h3>
           <p style="font-family: monospace; font-size: 12px; color: #666; margin: 0;">Acrylic on Canvas &bull; 3 x 4 ft &bull; 2024</p>
@@ -476,11 +483,23 @@
 
     <div id="project-spotlight" class="project-overlay" style="z-index: 2200;">
       <button class="close-overlay-btn" onclick="closeProjectDetail('spotlight')">Close Artwork &times;</button>
-      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
-        <div class="unveil-section-title">works on canvas</div>
-        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">TBC</h1>
+      <div class="overlay-content-wrapper" style="max-width: 1100px; margin: 0 auto;">
+        
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">TBC</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 25px;">Works on Canvas &bull; 2024</div>
+
+        <!-- Concept Text (Full Width & Fully Justified) -->
+        <div style="width: 100%; font-size: 14px; line-height: 1.8; color: #444; text-align: justify; margin-bottom: 35px;">
+          <p style="margin: 0 0 16px 0;">
+            This ongoing body of works on canvas explores material texture and chromatic resonance within minimalist compositional frameworks. Each piece examines how subtle shifts in tone can evoke deep psychological spaces and spatial tension.
+          </p>
+          <p style="margin: 0;">
+            Inviting prolonged contemplation, the work operates at the intersection of material presence and atmospheric absence, capturing fleeting moments of stillness in an otherwise rapid environment.
+          </p>
+        </div>
+
         <div style="max-width: 480px; margin: 0 auto;">
-          <img src="images/2.jpeg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Works on Canvas View">
+          <img src="images/trio.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Works on Canvas View">
         </div>
       </div>
     </div>
@@ -490,7 +509,23 @@
       <div class="overlay-content-wrapper" style="max-width: 1100px; margin: 0 auto;">
         
         <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">DRIFT</h1>
-        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 35px;">four-channel video installation &bull; 1 min 50 sec &bull; 2026</div>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 25px;">four-channel video installation &bull; 1 min 50 sec &bull; 2026</div>
+
+        <!-- Concept Text (Full Width & Fully Justified) -->
+        <div style="width: 100%; font-size: 14px; line-height: 1.8; color: #444; text-align: justify; margin-bottom: 35px;">
+          <p style="margin: 0 0 16px 0;">
+            Drift explores the subtle disconnection between consciousness and the physical body in the course of everyday life. As familiar movements become automatic, our attention begins to wander, creating a state of being neither fully present nor entirely detached from our surroundings.
+          </p>
+          <p style="margin: 0 0 16px 0;">
+            Moving between public spaces and the intimacy of private environments, the work presents a gradual shift in perception, where familiar objects and environments begin to behave in unexpected ways. Objects appear to float, stretch, or take on unfamiliar forms, disrupting the ordinary logic of the spaces they inhabit.
+          </p>
+          <p style="margin: 0 0 16px 0;">
+            These visual disturbances are not representations of literal weightlessness, but reflections of an altered state of awareness, suspended between control and uncertainty, presence and absence. Through these subtle disruptions, Drift considers how the familiar can momentarily become unfamiliar, revealing the instability of our everyday perceptions.
+          </p>
+          <p style="margin: 0;">
+            Rather than leading towards a fixed destination, drifting becomes a continuous process of detachment and return, where the boundary between the external world and internal consciousness remains fluid.
+          </p>
+        </div>
 
         <!-- Single 16:9 x 4 Ultra-Wide Video Container -->
         <div style="width: 100%; margin-bottom: 50px;">
@@ -503,37 +538,31 @@
         </div>
 
         <!-- Additional Panoramic Stills / Variations Gallery -->
-        <div class="unveil-section-title" style="margin-bottom: 25px;">Installation Views & Stills</div>
+        <div class="unveil-section-title" style="margin-bottom: 25px;">Installation Views</div>
 
         <div style="display: flex; flex-direction: column; gap: 40px; margin-bottom: 40px;">
           <div>
             <img src="images/11.jpeg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT Installation View">
-            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Installation view in black box gallery</span>
           </div>
 
           <div>
             <img src="images/DRIFT_2.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT Installation View">
-            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Installation view in black box gallery</span>
           </div>
 
           <div>
             <img src="images/DRIFT_3.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT Multi-channel Still 2">
-            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Spherical perspective mapping</span>
           </div>
 
           <div>
             <img src="images/DRIFT_4.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT Motion Graphic Breakdown">
-            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Motion graphic stream layout</span>
           </div>
 
           <div>
             <img src="images/DRIFT_5.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT 3D Asset Floating Composition">
-            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Floating 3D elements composition</span>
           </div>
 
           <div>
             <img src="images/DRIFT_6.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="DRIFT Color Gradient Study">
-            <span style="font-family: monospace; font-size: 11px; color: #666; margin-top: 8px; display: block;">Graded composite sequence</span>
           </div>
         </div>
 
@@ -542,91 +571,246 @@
 
     <div id="project-index-02" class="project-overlay" style="z-index: 2200;">
       <button class="close-overlay-btn" onclick="closeProjectDetail('index-02')">Close Artwork &times;</button>
-      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
-        <div class="unveil-section-title">Index Ref // 02 — Printed Edition / Taipei</div>
-        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">TAB(TPE): 1st Photobook Edition</h1>
-        <div style="max-width: 480px; margin: 0 auto;">
-          <img src="images/5.jpeg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Taipei Photobook View">
+      <div class="overlay-content-wrapper" style="max-width: 1100px; margin: 0 auto;">
+        
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">TAB(TPE)</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 25px;">Printed Photography Book &bull; 2025</div>
+
+        <!-- Concept Text -->
+        <div style="width: 100%; font-size: 14px; line-height: 1.8; color: #444; text-align: justify; margin-bottom: 35px;">
+          <p style="margin: 0 0 16px 0;">
+            TAB(TPE) documents initial observations and spatial encounters experienced upon relocating to Taipei. The photobook compiles urban textures, transit moments, and fleeting architectural fragments gathered through daily exploration.
+          </p>
+          <p style="margin: 0;">
+            Serving as both an archive and a personal map, this first edition captures the rhythm of a new metropolis, balancing disorientation with discovery across its printed spreads.
+          </p>
         </div>
+
+        <!-- Side-by-Side Photobook Gallery Grid -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 40px;">
+          <div>
+            <img src="images/tpe_cover.jpeg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Taipei Photobook View">
+          </div>
+          <div>
+            <img src="images/tpe1.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 1">
+          </div>
+          <div>
+            <img src="images/tpe2.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 2">
+          </div>
+          <div>
+            <img src="images/tpe3.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 3">
+          </div>
+          <div>
+            <img src="images/tpe4.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 4">
+          </div>
+          <div>
+            <img src="images/tpe5.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 5">
+          </div>
+          <div>
+            <img src="images/tpe6.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 6">
+          </div>
+          <div>
+            <img src="images/tpe7.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 7">
+          </div>
+        </div>
+
       </div>
     </div>
 
     <div id="project-index-03" class="project-overlay" style="z-index: 2200;">
       <button class="close-overlay-btn" onclick="closeProjectDetail('index-03')">Close Artwork &times;</button>
-      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
-        <div class="unveil-section-title">Index Ref // 03 — Photobook</div>
-        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">DOUBLE FANTASY! PHOTOBOOK</h1>
-        <div style="max-width: 480px; margin: 0 auto;">
-          <img src="images/6.jpeg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Double Fantasy View">
+      <div class="overlay-content-wrapper" style="max-width: 1100px; margin: 0 auto;">
+        
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">Double Fantasy!</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 25px;">Visual Graphic Publication &bull; 2026</div>
+
+        <!-- Concept Text (Full Width & Fully Justified) -->
+        <div style="width: 100%; font-size: 14px; line-height: 1.8; color: #444; text-align: justify; margin-bottom: 35px;">
+          <p style="margin: 0 0 16px 0;">
+            Double Fantasy explores the overlapping thresholds between imagined narratives and lived reality. Through custom graphic layouts, poetic fragments, and visual spreads, the publication constructs an alternate space where everyday imagery is reframed.
+          </p>
+          <p style="margin: 0;">
+            The project questions the reliability of perception, examining how interior desires and external stimuli blur together into a unified visual essay.
+          </p>
         </div>
+
+         <!-- Side-by-Side Photobook Gallery Grid -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 40px;">
+          <div>
+            <img src="images/tpe_cover.jpeg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Taipei Photobook View">
+          </div>
+          <div>
+            <img src="images/tpe1.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 1">
+          </div>
+          <div>
+            <img src="images/tpe2.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 2">
+          </div>
+          <div>
+            <img src="images/tpe3.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 3">
+          </div>
+          <div>
+            <img src="images/tpe4.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 4">
+          </div>
+          <div>
+            <img src="images/tpe5.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 5">
+          </div>
+          <div>
+            <img src="images/tpe6.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 6">
+          </div>
+          <div>
+            <img src="images/tpe7.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TAB(TPE) Spread 7">
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <div id="project-index-04" class="project-overlay" style="z-index: 2200;">
-      <button class="close-overlay-btn" onclick="closeProjectDetail('index-04')">Close Artwork &times;</button>
-      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
-        <div class="unveil-section-title">Index Ref // 04 — 3D+VFX Series</div>
-        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">Alien Interlude</h1>
-        <div style="max-width: 480px; margin: 0 auto;">
-          <img src="images/ALIEN.jpg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Alien View">
-        </div>
-      </div>
-    </div>
-
+    <!-- index-05 with path title retained as ROOTS photography collection (cleaned up broken empty image tags) -->
     <div id="project-index-05" class="project-overlay" style="z-index: 2200;">
       <button class="close-overlay-btn" onclick="closeProjectDetail('index-05')">Close Artwork &times;</button>
-      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
-        <div class="unveil-section-title">Photography Collection</div>
-        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">roots</h1>
-        <p style="font-size: 14px; color: #555555; margin-bottom: 25px;">A photography collection of my eyes.</p>
-        <div style="max-width: 480px; margin: 0 auto;">
-          <img src="images/8.jpeg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Roots Main View">
+      <div class="overlay-content-wrapper" style="max-width: 1100px; margin: 0 auto;">
+        
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">path</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 25px;">Photography &bull; 2026</div>
+
+        <!-- Concept Text (Full Width & Fully Justified) -->
+        <div style="width: 100%; font-size: 14px; line-height: 1.8; color: #444; text-align: justify; margin-bottom: 35px;">
+          <p style="margin: 0 0 16px 0;">
+            This is the path one. 
+          </p>
+          <p style="margin: 0;">
+            Haven think of a context for it yet..
+          </p>
         </div>
+
+        <!-- Side-by-Side Photobook Gallery Grid -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 40px;">
+          <div>
+            <img src="images/path1.jpeg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Path View 1">
+          </div>
+          <div>
+            <img src="images/path2.jpeg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Path View 2">
+          </div>
+        </div>
+
       </div>
     </div>
 
     <div id="project-portraits" class="project-overlay" style="z-index: 2200;">
       <button class="close-overlay-btn" onclick="closeProjectDetail('portraits')">Close Artwork &times;</button>
-      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
-        <div class="unveil-section-title">Portraits Series</div>
-        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">Portraits of SATO WAKANA</h1>
-        <div style="max-width: 480px; margin: 0 auto;">
-          <img src="images/portrait.jpg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Portraits View">
+      <div class="overlay-content-wrapper" style="max-width: 1100px; margin: 0 auto;">
+        
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">Portraits of Sato Wakana</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 25px;">Photography &bull; 2026</div>
+
+        <!-- Concept Text (Full Width & Fully Justified) -->
+        <div style="width: 100%; font-size: 14px; line-height: 1.8; color: #444; text-align: justify; margin-bottom: 35px;">
+          <p style="margin: 0 0 16px 0;">
+            This portrait series explores identity, quiet presence, and the nuances of human connection through photographic studies of Sato Wakana. 
+          </p>
+          <p style="margin: 0;">
+            By focusing on natural light and unposed expressions, the work captures psychological depth and the delicate interplay between subject and surrounding space.
+          </p>
         </div>
+
+        <!-- Side-by-Side Photobook Gallery Grid -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 40px;">
+          <div>
+            <img src="images/wakana1.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Wakana Portrait 1">
+          </div>
+          <div>
+            <img src="images/wakana2.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Wakana Portrait 2">
+          </div>
+          <div>
+            <img src="images/wakana3.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Wakana Portrait 3">
+          </div>
+          <div>
+            <img src="images/wakana4.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Wakana Portrait 4">
+          </div>
+          <div>
+            <img src="images/wakana5.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Wakana Portrait 5">
+          </div>
+          <div>
+            <img src="images/wakana6.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Wakana Portrait 6">
+          </div>
+          <div>
+            <img src="images/wakana7.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Wakana Portrait 7">
+          </div>
+          <div>
+            <img src="images/wakana8.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Wakana Portrait 8">
+          </div>
+            <img src="images/wakana9.png" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Wakana Portrait 9">
+          </div>
+        </div>
+
       </div>
     </div>
 
     <div id="project-shoots" class="project-overlay" style="z-index: 2200;">
       <button class="close-overlay-btn" onclick="closeProjectDetail('shoots')">Close Artwork &times;</button>
-      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
-        <div class="unveil-section-title">Commercial Production</div>
-        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">REDBULL commercial</h1>
+      <div class="overlay-content-wrapper" style="max-width: 1100px; margin: 0 auto;">
+        
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">Red Bull Commercial Production</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 25px;">Commercial Production &bull; 2025</div>
+
+        <!-- Concept Text (Full Width & Fully Justified) -->
+        <div style="width: 100%; font-size: 14px; line-height: 1.8; color: #444; text-align: justify; margin-bottom: 35px;">
+          <p style="margin: 0 0 16px 0;">
+            Behind-the-scenes documentation and visual direction from commercial production work with Red Bull. This project combined high-energy movement choreography with precision camera tracking and dynamic lighting design.
+          </p>
+          <p style="margin: 0;">
+            Balancing commercial requirements with artistic motion aesthetics, the shoot highlights fast-paced environmental action and vibrant color grading.
+          </p>
+        </div>
+
         <div style="max-width: 480px; margin: 0 auto;">
-          <img src="images/shoot.jpg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Shoot View">
+          <img src="images/shoot.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Shoot View">
         </div>
       </div>
     </div>
 
     <div id="project-glitch" class="project-overlay" style="z-index: 2200;">
       <button class="close-overlay-btn" onclick="closeProjectDetail('glitch')">Close Artwork &times;</button>
-      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
+      <div class="overlay-content-wrapper" style="max-width: 1100px; margin: 0 auto;">
         
-        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">glitch</h1>
-        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 35px;">Urban traces and environmental flow</div>
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">Glitch</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 25px;">Urban traces and environmental flow &bull; 2025</div>
+
+        <!-- Concept Text (Full Width & Fully Justified) -->
+        <div style="width: 100%; font-size: 14px; line-height: 1.8; color: #444; text-align: justify; margin-bottom: 35px;">
+          <p style="margin: 0 0 16px 0;">
+            Glitch investigates urban traces and environmental flow through digital data corruption and visual distortion. By interrupting standard video signals and rendering artifacts, the work highlights the hidden vulnerabilities within our automated technological infrastructure.
+          </p>
+          <p style="margin: 0;">
+            These calculated disruptions transform ordinary cityscapes into fields of shifting pixels, questioning how we navigate digitally mediated environments.
+          </p>
+        </div>
 
         <div style="max-width: 480px; margin: 0 auto;">
-          <img src="images/glitch.jpg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="Glitch View">
+          <img src="images/glitch.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="Glitch View">
         </div>
       </div>
     </div>
 
     <div id="project-design" class="project-overlay" style="z-index: 2200;">
       <button class="close-overlay-btn" onclick="closeProjectDetail('design')">Close Artwork &times;</button>
-      <div class="overlay-content-wrapper" style="max-width: 700px; margin: 0 auto;">
-        <div class="unveil-section-title">Interactive Studies</div>
-        <h1 style="font-size: 28px; text-transform: uppercase; margin: 20px 0; color: #235ba8;">TouchDesigner</h1>
+      <div class="overlay-content-wrapper" style="max-width: 1100px; margin: 0 auto;">
+        
+        <h1 style="font-size: 28px; text-transform: uppercase; margin: 0 0 8px 0; color: #235ba8;">TouchDesigner Interactive Studies</h1>
+        <div style="font-family: monospace; font-size: 13px; color: #666; margin-bottom: 25px;">Interactive Studies &bull; 2026</div>
+
+        <!-- Concept Text (Full Width & Fully Justified) -->
+        <div style="width: 100%; font-size: 14px; line-height: 1.8; color: #444; text-align: justify; margin-bottom: 35px;">
+          <p style="margin: 0 0 16px 0;">
+            Developed as real-time generative motion studies using TouchDesigner, these networks translate time-based expressions and audio inputs into continuous visual transformations. TOP and CHOP structures drive responsive geometry and fluid textures.
+          </p>
+          <p style="margin: 0;">
+            The experiments explore algorithmic emergence, feedback loops, and the boundary between programmed code and organic movement.
+          </p>
+        </div>
+
         <div style="max-width: 480px; margin: 0 auto;">
-          <img src="images/TD.jpg" style="width: 100%; display: block; border: none; box-shadow: none;" alt="TouchDesigner View">
+          <img src="images/TD.jpg" style="width: 100%; display: block; border: none; box-shadow: none; cursor: zoom-in;" onclick="launchLightboxFromElement(this)" alt="TouchDesigner View">
         </div>
       </div>
     </div>
